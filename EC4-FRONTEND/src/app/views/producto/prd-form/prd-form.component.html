@@ -1,0 +1,46 @@
+<mat-form-field appearance="fill">
+    <mat-label>DESCRIPCION</mat-label>
+    <input matInput placeholder="DESCRIPCION" [(ngModel)]="producto.descripcion">
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+    <mat-label>STOCK</mat-label>
+    <input matInput placeholder="STOCK" [(ngModel)]="producto.stock">
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+    <mat-label>PRECIO</mat-label>
+    <input matInput placeholder="PRECIO" [(ngModel)]="producto.precio">
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill">
+    <mat-label>ESTADO</mat-label>
+    <input matInput placeholder="ESTADO" [(ngModel)]="producto.estado">
+</mat-form-field>
+
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label *ngIf="producto.categoria">{{producto.categoria.nombre}}</mat-label>
+        <mat-select matInput placeholder="Seleccione una categoria" [(ngModel)]="producto.categoria">
+            <mat-option *ngFor="let c of categoria" [value]="c">
+                {{c.nombre}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+        <mat-label *ngIf="producto.proveedor">{{producto.proveedor.nombre}}</mat-label>
+        <mat-select matInput placeholder="Seleccione un proveedor" [(ngModel)]="producto.proveedor">
+            <mat-option *ngFor="let p of proveedor" [value]="p">
+                {{p.nombre}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+
+<div>
+    <button mat-flat-button color="primary" (click)="guardar()">Guardar
+    </button>
+    <button mat-flat-button color="warn" (click)="cancelar()">Cancelar
+    </button>
+</div>

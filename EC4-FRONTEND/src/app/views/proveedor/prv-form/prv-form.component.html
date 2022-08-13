@@ -1,0 +1,26 @@
+<mat-form-field appearance="fill">
+    <mat-label>NOMBRE</mat-label>
+    <input matInput placeholder="NOMBRE" [(ngModel)]="proveedor.nombre">
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill" class="w-50">
+    <mat-label>CONTACTO</mat-label>
+    <input matInput placeholder="CONTACTO" [(ngModel)]="proveedor.contacto">
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill" class="w-50">
+    <mat-label>DIRECCION</mat-label>
+    <input matInput placeholder="DIRECCION" [(ngModel)]="proveedor.direccion">
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill" class="w-50">
+    <mat-label>TELEFONO</mat-label>
+    <input matInput placeholder="TELEFONO" [(ngModel)]="proveedor.telefono">
+</mat-form-field>
+
+<div>
+    <button mat-flat-button color="primary" (click)="guardar()">Guardar
+    </button>
+    <button mat-flat-button color="warn" (click)="cancelar()">Cancelar
+    </button>
+</div>

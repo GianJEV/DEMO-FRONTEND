@@ -1,0 +1,16 @@
+<mat-form-field appearance="fill">
+    <mat-label>NOMBRE</mat-label>
+    <input matInput placeholder="NOMBRE" [(ngModel)]="categoria.nombre">
+</mat-form-field>
+<br>
+<mat-form-field appearance="fill" class="w-50">
+    <mat-label>DESCRIPCION</mat-label>
+    <input matInput placeholder="DESCRIPCION" [(ngModel)]="categoria.descripcion">
+</mat-form-field>
+
+<div>
+    <button mat-flat-button color="primary" (click)="guardar()">Guardar
+    </button>
+    <button mat-flat-button color="warn" (click)="cancelar()">Cancelar
+    </button>
+</div>
